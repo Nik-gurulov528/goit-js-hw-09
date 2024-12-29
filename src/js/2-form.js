@@ -32,10 +32,7 @@ form.addEventListener('submit', event => {
   if (formData.email !== '' && formData.message !== '') {
     console.log(formData);
     localStorage.clear();
-    formData.email = '';
-    formData.message = '';
-    inputEmail.value = '';
-    inputMessage.value = '';
+    form.reset();
   } else {
     alert('Fill please all fields');
   }
